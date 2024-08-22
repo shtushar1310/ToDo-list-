@@ -41,12 +41,11 @@ const addFunction=()=>{
         //  console.log(createDeleteBtn)
          addList.appendChild(createDeleteBtn) 
 
-        //completion of task
-        const complicationTask=document.createElement('button')
-        complicationTask.innerHTML='COMPLETED'
-        complicationTask.classList.add('btn',)
-        addList.appendChild(complicationTask)
-
+        // completion of task
+        const myElement= document.createElement('p')
+        myElement.innerHTML='COMPLETED'
+        addList.appendChild(myElement)
+        
         
     inputBox.value=''
     
@@ -68,32 +67,17 @@ if(e.target.innerHTML==='EDIT'){
     // console.log(e)
 }
 if(e.target.innerHTML==='COMPLETED'){
+
     e.target.parentElement.innerHTML='COMPLETED'
-    inputBox.focus()
+    // console.log(e.target.innerHTML)
 }
+
+
   
 }
 
 
-const saveLocalToDO=(todo)=>{
-    let todos;
-    if (localStorage.getItem("todos") === null) {
-        todos = [];
-    }
-    else {
-        todos = JSON.parse(localStorage.getItem("todos"));
-    }
-    todos.push(todo);
-    localStorage.setItem("todos", JSON.stringify(todos));
 
-
-
-    
-// console.log(localStorage.setItem('todos',JSON.stringify(todos)));
-// console.log(JSON.parse(localStorage.getItem('todos')));
-
-
-}
 addButton.addEventListener( 'click',()=>{
     addFunction()
 })
