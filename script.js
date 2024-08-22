@@ -49,7 +49,7 @@ const addFunction=()=>{
 
         
     inputBox.value=''
-    saveLocalToDO(inputValue)
+    
 }
 }
 
@@ -67,7 +67,7 @@ if(e.target.innerHTML==='EDIT'){
     editBtnToDO=e
     // console.log(e)
 }
-if(e.target.innerHTML='COMPLETED'){
+if(e.target.innerHTML==='COMPLETED'){
     e.target.parentElement.innerHTML='COMPLETED'
     inputBox.focus()
 }
